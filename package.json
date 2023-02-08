@@ -1,0 +1,29 @@
+{
+  "name": "brain-progression",
+  "version": "1.0.0",
+  "description": "math game",
+  "main": "brain-progression.js",
+  "bin": {
+    "brain-progression": "bin/brain-progression.js"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Kimpo/brain-progression.git"
+  },
+  "author": "Kimpo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Kimpo/brain-progression/issues"
+  },
+  "homepage": "https://github.com/A-Kimpo/brain-progression#readme",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "readline-sync": "^1.4.10"
+  }
+}
