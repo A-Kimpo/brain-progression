@@ -24,20 +24,19 @@ const question2 = (name) => {
   }
   const arrClone = [...arr]; // клонирование массива
   const randomHide = Math.round(Math.random() * arrClone.length);
-  arrClone[randomHide] = '..'; // замена клонированного числа на '..'
-  const hideNum = arrClone.indexOf('..'); // определения индекса '..'
-  const showNum = arr[hideNum]; // определение значения в оригинальном массиве
+  arrClone[randomHide] = '..'; // замена числа на '..'
+  const hideNum = arr[randomHide];
 
   return new Promise((resolve) => {
     rl.question(`Question: ${arrClone.join(' ')}\n`, (answer) => {
       console.log(`Your answer: ${answer}`);
-      if (answer == showNum) {
+      if (Number(answer) === hideNum) {
         // верный ответ
         console.log('Correct!');
         resolve(true);
       } else {
         // неверный ответ
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${showNum}'. Let's try again, ${name}!`);
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hideNum}'. Let's try again, ${name}!`);
         resolve(false);
       }
     });
@@ -50,9 +49,9 @@ const main = async () => {
   const valueQue1 = await question1();
   console.log('What number is missing in the progression?');
   // создание условия, при котором пользователь, ответив верно 3 раза, выигрывает
-  if (await question2(valueQue1) == true) {
-    if (await question2(valueQue1) == true) {
-      if (await question2(valueQue1) == true) {
+  if (await question2(valueQue1) === true) {
+    if (await question2(valueQue1) === true) {
+      if (await question2(valueQue1) === true) {
         console.log(`Congratulations, ${valueQue1}!`);
       }
     }

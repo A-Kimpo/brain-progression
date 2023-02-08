@@ -9,6 +9,5 @@ parserOptions:
   sourceType: module
 rules: {
   no-console: 0,
-  eqeqeq: 0,
   no-plusplus: 0
 }
