@@ -21,7 +21,7 @@ const startRound = (name) => {
     arr.push((i * randomStep) + randomIncr);
   }
   const arrClone = [...arr]; // клонирование массива
-  const randomHide = Math.round(Math.random() * arrClone.length);
+  const randomHide = Math.floor(Math.random(0, 1) * arrClone.length);
   arrClone[randomHide] = '..'; // замена числа на '..'
   const hideNum = arr[randomHide];
 
