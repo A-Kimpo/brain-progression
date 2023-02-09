@@ -48,15 +48,12 @@ const main = async () => {
   console.log('What number is missing in the progression?');
   // добавление счетчика верных ответов, при 3 верных подряд игрок побеждает
   let rightAnswCount = 0;
-  console.log(rightAnswCount);
   do {
     // eslint-disable-next-line no-await-in-loop
     if (await startRound(valueUserName) === true) {
       rightAnswCount += 1;
-      console.log(rightAnswCount);
     } else {
       rightAnswCount = 0;
-      console.log(rightAnswCount);
     }
   } while (rightAnswCount !== 3);
   console.log(`Congratulations, ${valueUserName}!`);

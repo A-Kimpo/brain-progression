@@ -10,7 +10,5 @@ parserOptions:
 rules: {
   no-console: 0,
   no-plusplus: 0,
-  import/extensions: [
-    - js: always
-  ]
+  import/extensions: always
 }
